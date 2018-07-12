@@ -23,6 +23,7 @@ export default class PhotoGallery extends Component {
     const { setCloudData, fetchTheme } = this.props
     setCloudData(fetchTheme)
   }
+
   renameProp = (oldProp, newProp, { [oldProp]: old, ...others }) => ({
     [newProp]: old,
     ...others

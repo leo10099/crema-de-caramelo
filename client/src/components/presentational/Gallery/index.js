@@ -39,6 +39,7 @@ class Gallery extends Component {
   resetGallery = () => {
     this.setState(prevState => ({
       ...prevState,
+      cloudData: {},
       currentGallery: '',
       showGallery: false
     }))
@@ -82,6 +83,7 @@ class Gallery extends Component {
     return (
       <PhotoGallery
         currentGallery={this.state.currentGallery}
+        setCurrentGallery={this.setCurrentGallery}
         setCloudData={this.setCloudData}
         fetchTheme={this.fetchTheme}
         cloudData={this.state.cloudData}
