@@ -36,6 +36,14 @@ class Gallery extends Component {
     }))
   }
 
+  resetGallery = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      currentGallery: '',
+      showGallery: false
+    }))
+  }
+
   fetchTheme = async currentGallery => {
     let recursos = []
     let response = await axios.get(`/api/themes/${currentGallery}`)
@@ -61,7 +69,11 @@ class Gallery extends Component {
           themes={this.state.themes}
           setCurrentGallery={this.setCurrentGallery}
         />
-        <Footer />
+        <Footer>
+          <i className='far fa-question-circle' />
+          {' '}
+          Cliqueá para ver fotos reales de nuestro trabajo
+        </Footer>
       </section>
     )
   }
@@ -73,6 +85,7 @@ class Gallery extends Component {
         setCloudData={this.setCloudData}
         fetchTheme={this.fetchTheme}
         cloudData={this.state.cloudData}
+        resetGallery={this.resetGallery}
       />
     )
   }

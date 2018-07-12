@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import Nav from '../Nav'
 import Footer from './Footer'
 import ReactPhotoGallery from 'react-photo-gallery'
-import _ from 'lodash'
-
 import Lightbox from 'react-images'
+import _ from 'lodash'
 
 export default class PhotoGallery extends Component {
   state = {
@@ -69,7 +68,11 @@ export default class PhotoGallery extends Component {
             isOpen={this.state.lightboxIsOpen}
           />
         </div>
-        <Footer />
+        <Footer resetGallery={this.props.resetGallery}>
+          <span className='fake-link'>
+            <i className='fa fa-caret-left' /> {' '} Volver
+          </span>
+        </Footer>
       </section>
     )
   }

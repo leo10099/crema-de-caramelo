@@ -535,6 +535,12 @@ a {
   font-weight: bold;
 }
 
+span.fake-link {
+  cursor: pointer;
+}
+
+/*
+
 @keyframes slideOut {
   from {
     transform: translate3d(-100%, 0%, 0%);
@@ -568,4 +574,4 @@ a {
 }
 .themeBlock-leave-active {
   animation: slideOut 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
+}*/
