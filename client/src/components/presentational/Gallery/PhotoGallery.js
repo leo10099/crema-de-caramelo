@@ -57,17 +57,15 @@ export default class PhotoGallery extends Component {
     return (
       <section className='image-grid__container'>
         <Nav />
-        <div>
-          <ReactPhotoGallery photos={fotos} onClick={this.openLightbox} />
-          <Lightbox
-            images={fotos}
-            onClose={this.closeLightbox}
-            onClickPrev={this.gotoPrevious}
-            onClickNext={this.gotoNext}
-            currentImage={this.state.currentImage}
-            isOpen={this.state.lightboxIsOpen}
-          />
-        </div>
+        <ReactPhotoGallery photos={fotos} onClick={this.openLightbox} />
+        <Lightbox
+          images={fotos}
+          onClose={this.closeLightbox}
+          onClickPrev={this.gotoPrevious}
+          onClickNext={this.gotoNext}
+          currentImage={this.state.currentImage}
+          isOpen={this.state.lightboxIsOpen}
+        />
         <Footer resetGallery={this.props.resetGallery}>
           <span className='fake-link'>
             <i className='fa fa-caret-left' /> {' '} Volver
