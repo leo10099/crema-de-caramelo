@@ -4,10 +4,12 @@ import Footer from './Footer'
 import ReactPhotoGallery from 'react-photo-gallery'
 import Lightbox from 'react-images'
 import _ from 'lodash'
+import Measure from 'react-measure'
 
 export default class PhotoGallery extends Component {
   state = {
-    currentImage: 0
+    currentImage: 0,
+    width: -1
   }
   constructor () {
     super()
@@ -54,24 +56,49 @@ export default class PhotoGallery extends Component {
     const fotos = data.map(datita =>
       this.renameProp('secure_url', 'src', datita)
     )
+    const width = this.state.width
     return (
-      <section className='image-grid__container'>
-        <Nav />
-        <ReactPhotoGallery photos={fotos} onClick={this.openLightbox} />
-        <Lightbox
-          images={fotos}
-          onClose={this.closeLightbox}
-          onClickPrev={this.gotoPrevious}
-          onClickNext={this.gotoNext}
-          currentImage={this.state.currentImage}
-          isOpen={this.state.lightboxIsOpen}
-        />
-        <Footer resetGallery={this.props.resetGallery}>
-          <span className='fake-link'>
-            <i className='fa fa-caret-left' /> {' '} Volver
-          </span>
-        </Footer>
-      </section>
+      <Measure
+        bounds
+        onResize={contentRect =>
+          this.setState({ width: contentRect.bounds.width })}
+      >
+        {({ measureRef }) => {
+          if (width < 1) {
+            return <div ref={measureRef} />
+          }
+          let columns = 1
+          if (width >= 480) {
+            columns = 2
+          }
+          if (width >= 1024) {
+            columns = 3
+          }
+          return (
+            <div className='image-grid__container' ref={measureRef}>
+              <Nav />
+              <ReactPhotoGallery
+                photos={fotos}
+                onClick={this.openLightbox}
+                columns={columns}
+              />
+              <Lightbox
+                images={fotos}
+                onClose={this.closeLightbox}
+                onClickPrev={this.gotoPrevious}
+                onClickNext={this.gotoNext}
+                currentImage={this.state.currentImage}
+                isOpen={this.state.lightboxIsOpen}
+              />
+              <Footer resetGallery={this.props.resetGallery}>
+                <span className='fake-link'>
+                  <i className='fa fa-caret-left' /> {' '} Volver
+                </span>
+              </Footer>
+            </div>
+          )
+        }}
+      </Measure>
     )
   }
 }

@@ -72,7 +72,6 @@ a {
   .image-grid__container {
     display: grid;
     grid-template-rows: minmax(min-content, max-content) minmax(600px, 1fr) 40px;
-    height: 100vh;
   }
 }
 @media screen and (min-width: 768px) {
@@ -89,6 +88,9 @@ a {
     display: grid;
     grid-template-rows: 65px 1fr 50px;
     height: 100vh;
+  }
+  .react-photo-gallery {
+    height: 100%;
   }
 }
 
@@ -388,10 +390,6 @@ a {
   background-repeat: no-repeat;
   background-color: var(--rosa);
   background-blend-mode: color-burn;
-}
-
-.react-photo-gallery {
-  height: 100%;
 }
 
 @media screen and (min-width: 769px) {
