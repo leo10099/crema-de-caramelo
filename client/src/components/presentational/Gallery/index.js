@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Nav from '../Nav'
 import Footer from './Footer'
+import HeaderImg from '../../../assets/img/caragaleria3.png'
 import ThemeSelector from './ThemeSelector'
 import axios from 'axios'
 import { withRouter } from 'react-router'
@@ -66,10 +67,12 @@ class Gallery extends Component {
     return (
       <section className='image-gallery__container'>
         <Nav {...this.props} />
+        asds <img src={HeaderImg} alt='' className='header-section-img' />
         <ThemeSelector
           themes={this.state.themes}
           setCurrentGallery={this.setCurrentGallery}
         />
+
         <Footer>
           <i className='far fa-question-circle' />
           {' '}

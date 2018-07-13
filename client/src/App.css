@@ -95,6 +95,11 @@ a {
   }
 }
 
+.header-section-img {
+  width: 250px;
+  margin: auto;
+}
+
 /* NAV */
 
 @media screen and (max-width: 768px) {
