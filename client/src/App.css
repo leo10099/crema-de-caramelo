@@ -71,7 +71,8 @@ a {
 
   .image-grid__container {
     display: grid;
-    grid-template-rows: 65px 1fr minmax(min-content, max-content);
+    grid-template-rows: minmax(min-content, max-content) 1fr
+      minmax(min-content, max-content);
   }
 }
 @media screen and (min-width: 768px) {

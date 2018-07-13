@@ -30,6 +30,12 @@ class Nav extends React.Component {
     }
   } */
 
+  checkGallery = () => {
+    if (this.props.currentGallery !== '') {
+      this.props.resetGallery()
+    }
+  }
+
   toggleBurgerOpen = () => {
     this.state.burger === 'nav-burger'
       ? this.setState(prevState => ({
@@ -59,7 +65,12 @@ class Nav extends React.Component {
             <span />
           </div>
         </div>
-        <Link to='/galeria' className={this.state.galeria} ref={this.galeria}>
+        <Link
+          to='/galeria'
+          onClick={this.checkGallery}
+          className={this.state.galeria}
+          ref={this.galeria}
+        >
           <i className='fa fa-camera' /> &nbsp; Galería de Imágenes
         </Link>
         <Link

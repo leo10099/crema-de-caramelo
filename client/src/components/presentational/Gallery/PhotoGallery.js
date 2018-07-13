@@ -77,7 +77,10 @@ export default class PhotoGallery extends Component {
           }
           return (
             <div className='image-grid__container' ref={measureRef}>
-              <Nav />
+              <Nav
+                resetGallery={this.props.resetGallery}
+                currentGallery={this.props.currentGallery}
+              />
               <ReactPhotoGallery
                 photos={fotos}
                 onClick={this.openLightbox}
