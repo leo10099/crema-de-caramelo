@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import Nav from '../Nav'
 import Footer from './Footer'
 import ReactPhotoGallery from 'react-photo-gallery'
+import { Link } from 'react-router-dom'
 import Lightbox from 'react-images'
-import _ from 'lodash'
 import Measure from 'react-measure'
-
+import _ from 'lodash'
 export default class PhotoGallery extends Component {
   state = {
     currentImage: 0,
@@ -92,9 +92,9 @@ export default class PhotoGallery extends Component {
                 isOpen={this.state.lightboxIsOpen}
               />
               <Footer resetGallery={this.props.resetGallery}>
-                <span className='fake-link'>
-                  <i className='fa fa-caret-left' /> {' '} Volver
-                </span>
+                <i className='fa fa-caret-left' />
+                {' '}
+                <Link to='/galeria'>Volver</Link>
               </Footer>
             </div>
           )
