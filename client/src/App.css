@@ -56,6 +56,13 @@ a {
   font-size: 1.7rem;
 }
 
+.spinner {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
 /* Containers */
 
 @media screen and (max-width: 768px) {

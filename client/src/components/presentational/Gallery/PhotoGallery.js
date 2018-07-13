@@ -3,20 +3,18 @@ import Nav from '../Nav'
 import Footer from './Footer'
 import ReactPhotoGallery from 'react-photo-gallery'
 import { Link } from 'react-router-dom'
+import { GridLoader } from 'react-spinners'
 import Lightbox from 'react-images'
 import Measure from 'react-measure'
 import _ from 'lodash'
-import { RingLoader } from 'react-spinners'
 
 export default class PhotoGallery extends Component {
   state = {
     currentImage: 0,
-    width: -1,
-    loading: true
+    width: -1
   }
   constructor () {
     super()
-    this.state = { currentImage: 0 }
     this.closeLightbox = this.closeLightbox.bind(this)
     this.openLightbox = this.openLightbox.bind(this)
     this.gotoNext = this.gotoNext.bind(this)
@@ -61,12 +59,17 @@ export default class PhotoGallery extends Component {
       this.renameProp('secure_url', 'src', datita)
     )
     const width = this.state.width
-
-    if (this.state.loading === true) {
+    if (!this.props.cloudData[0]) {
       return (
-        <div className='sweet-loading'>
-          <RingLoader color={'#123abc'} loading={this.state.loading} />
-        </div>
+        <section>
+          <Nav
+            resetGallery={this.props.resetGallery}
+            currentGallery={this.props.currentGallery}
+          />
+          <div className='spinner'>
+            <GridLoader color={'#665687'} loading={this.state.loading} />
+          </div>
+        </section>
       )
     } else {
       return (
