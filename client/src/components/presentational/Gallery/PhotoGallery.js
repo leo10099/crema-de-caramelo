@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import { GridLoader } from 'react-spinners'
 import Lightbox from 'react-images'
 import Measure from 'react-measure'
-import _ from 'lodash'
 
 export default class PhotoGallery extends Component {
   state = {
@@ -53,11 +52,9 @@ export default class PhotoGallery extends Component {
   }
 
   render () {
-    const data = _.flatten(this.props.cloudData)
-    // Renombrar la URL segura de Cloudinary por src, prop-name requerida por react-photo-gallery
-    const fotos = data.map(datita =>
-      this.renameProp('secure_url', 'src', datita)
-    )
+    // Formatear los datos según las prop-types requeridas por React Photo Gallery
+    const data = [...this.props.cloudData].reduce((a, b) => a.concat(b), [])
+    const fotos = data.map(foto => this.renameProp('secure_url', 'src', foto))
     const width = this.state.width
     if (!this.props.cloudData[0]) {
       return (
