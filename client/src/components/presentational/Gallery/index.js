@@ -38,12 +38,11 @@ class Gallery extends Component {
   }
 
   resetGallery = () => {
-    this.setState(prevState => ({
-      ...prevState,
+    this.setState({
       cloudData: {},
       currentGallery: '',
       showGallery: false
-    }))
+    })
   }
 
   fetchTheme = async currentGallery => {

@@ -19,15 +19,12 @@ export default class PhotoGallery extends Component {
     this.gotoNext = this.gotoNext.bind(this)
     this.gotoPrevious = this.gotoPrevious.bind(this)
   }
-  componentWillMount () {
+  componentDidMount () {
     const { setCloudData, fetchTheme } = this.props
     setCloudData(fetchTheme)
+    this.forceUpdate()
   }
 
-  renameProp = (oldProp, newProp, { [oldProp]: old, ...others }) => ({
-    [newProp]: old,
-    ...others
-  })
   openLightbox (event, obj) {
     this.setState({
       currentImage: obj.index,
@@ -50,6 +47,11 @@ export default class PhotoGallery extends Component {
       currentImage: this.state.currentImage + 1
     })
   }
+
+  renameProp = (oldProp, newProp, { [oldProp]: old, ...others }) => ({
+    [newProp]: old,
+    ...others
+  })
 
   render () {
     // Formatear los datos según las prop-types requeridas por React Photo Gallery
