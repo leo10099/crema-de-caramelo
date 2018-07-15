@@ -3,7 +3,6 @@ import Nav from '../Nav'
 import Footer from './Footer'
 import ReactPhotoGallery from 'react-photo-gallery'
 import Lightbox from 'react-images'
-import _ from 'lodash'
 import Measure from 'react-measure'
 
 export default class PhotoGallery extends Component {
@@ -53,7 +52,7 @@ export default class PhotoGallery extends Component {
 
   render () {
     const width = this.state.width
-    const data = _.flatten(this.props.cloudData)
+    const data = [...this.props.cloudData].reduce((a, b) => a.concat(b), [])
     // Renombrar la URL segura de Cloudinary por src, prop-name requerida por react-photo-gallery
     const fotos = data.map(datita =>
       this.renameProp('secure_url', 'src', datita)
