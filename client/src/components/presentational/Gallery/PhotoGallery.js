@@ -54,9 +54,7 @@ export default class PhotoGallery extends Component {
     const width = this.state.width
     const data = [...this.props.cloudData].reduce((a, b) => a.concat(b), [])
     // Renombrar la URL segura de Cloudinary por src, prop-name requerida por react-photo-gallery
-    const fotos = data.map(datita =>
-      this.renameProp('secure_url', 'src', datita)
-    )
+    const fotos = data.map(foto => this.renameProp('secure_url', 'src', foto))
 
     return (
       <Measure
