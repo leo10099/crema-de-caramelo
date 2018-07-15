@@ -10,14 +10,7 @@ export default class PhotoGallery extends Component {
     currentImage: 0,
     width: -1
   }
-  constructor () {
-    super()
-    this.state = { currentImage: 0 }
-    this.closeLightbox = this.closeLightbox.bind(this)
-    this.openLightbox = this.openLightbox.bind(this)
-    this.gotoNext = this.gotoNext.bind(this)
-    this.gotoPrevious = this.gotoPrevious.bind(this)
-  }
+
   componentWillMount () {
     const { setCloudData, fetchTheme } = this.props
     setCloudData(fetchTheme)
@@ -27,24 +20,24 @@ export default class PhotoGallery extends Component {
     [newProp]: old,
     ...others
   })
-  openLightbox (event, obj) {
+  openLightbox = (event, obj) => {
     this.setState({
       currentImage: obj.index,
       lightboxIsOpen: true
     })
   }
-  closeLightbox () {
+  closeLightbox = () => {
     this.setState({
       currentImage: 0,
       lightboxIsOpen: false
     })
   }
-  gotoPrevious () {
+  gotoPrevious = () => {
     this.setState({
       currentImage: this.state.currentImage - 1
     })
   }
-  gotoNext () {
+  gotoNext = () => {
     this.setState({
       currentImage: this.state.currentImage + 1
     })
