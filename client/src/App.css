@@ -597,6 +597,7 @@ span.fake-link {
   text-align: center;
   font-size: 2.5rem;
   font-family: 'Freestyle';
+  line-height: 2rem;
 }
 .social-container {
   display: block;

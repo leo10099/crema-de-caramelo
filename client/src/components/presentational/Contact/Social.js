@@ -13,7 +13,7 @@ export default class Social extends Component {
     return (
       <section className='social-container'>
         <div className='social-phone'>
-          <i className='fa fa-phone-square' />{' '}11 - 6247 - 0115
+          <i className='fa fa-phone' />{' '}11 - 6247 - 0115
         </div>
         <div className='contact__button-panel'>
           <ContactButton className='mobile-only' onClick={this.sendWhatsapp}>
@@ -22,7 +22,7 @@ export default class Social extends Component {
           </ContactButton>
           <ContactButton onClick={this.goToFb}>
             Más sobre nosotras en {' '}
-            <i className='fab fa-facebook-f texto-verde'/>
+            <i className='fab fa-facebook-f texto-verde' />
           </ContactButton>
         </div>
       </section>
