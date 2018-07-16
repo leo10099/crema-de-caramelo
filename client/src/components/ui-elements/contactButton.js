@@ -4,10 +4,11 @@ const contactButton = styled.button`
 display: block;
 margin: 3rem auto;
 padding: 1rem;
-border: 2px solid ${props => props.theme.rosa};
+width:400px;
+border: 2px solid ${props => props.theme.crema};
 border-radius: 1.5px;
-background-color: ${props => props.theme.rosa};
-color: ${props => props.theme.violeta};
+background-color: transparent;
+color: ${props => props.theme.crema};
 
 
 cursor: pointer;
