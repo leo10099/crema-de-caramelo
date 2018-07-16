@@ -576,7 +576,7 @@ span.fake-link {
   background-repeat: no-repeat;
   background-color: var(--violetaClaro);
   background-blend-mode: soft-light;
-  background-position: top right;
+  background-position: fixed;
   display: grid;
 }
 
@@ -610,10 +610,13 @@ span.fake-link {
     letter-spacing: 2px;
   }
   .contact__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--crema);
   }
   .contact__img-title {
-    padding-top: 1.4rem;
+    padding-top: 1rem;
+    width: 200px;
   }
 }
 
