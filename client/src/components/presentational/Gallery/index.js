@@ -66,7 +66,7 @@ class Gallery extends Component {
     return (
       <section className='image-gallery__container'>
         <Nav {...this.props} />
-        <img src={HeaderImg} alt='' className='header-section-img' />
+        <img src={HeaderImg} alt='' className='img-title__gallery' />
         <ThemeSelector
           themes={this.state.themes}
           setCurrentGallery={this.setCurrentGallery}

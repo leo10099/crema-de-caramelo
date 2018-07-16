@@ -56,14 +56,7 @@ a {
   font-size: 1.7rem;
 }
 
-.spinner {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Containers */
+/* CONTAINERS */
 
 @media screen and (max-width: 768px) {
   .home-container {
@@ -99,18 +92,14 @@ a {
     grid-template-rows: 65px 1fr 50px;
     height: 100vh;
   }
+  .contact-grid__container {
+    display: grid;
+    grid-template-rows: 65px 1fr;
+    height: 100vh;
+  }
 }
 .react-photo-gallery {
   height: 100%;
-}
-
-.header-section-img {
-  width: 250px;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding: 0.6rem auto;
 }
 
 /* NAV */
@@ -411,6 +400,15 @@ a {
   background-blend-mode: color-burn;
 }
 
+.img-title__gallery {
+  width: 250px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 0.6rem auto;
+}
+
 @media screen and (min-width: 769px) {
   .theme-selector__container {
     display: flex;
@@ -534,13 +532,33 @@ a {
   background-image: url('../../client/src/assets/img/bg/minnie.jpg');
 }
 
-/*.titulo--seccion {
-  padding-top: 2rem;
-  font-size: 4rem;
-  font-family: 'Freestyle';
-  letter-spacing: 0.4rem;
-  margin: 0rem auto;
-}*/
+/* CONTACT */
+
+@media screen and (min-width: 769px) {
+  .contact-container {
+    background-image: url('../src/assets/img/bg/contacto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--violeta);
+    background-blend-mode: overlay;
+    background-position: bottom;
+  }
+  .contact__img-title {
+    display: block;
+    width: 250px;
+    margin: 2rem auto;
+  }
+  .contact__title {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-family: 'Alcubierre';
+    letter-spacing: 0.4rem;
+    padding-top: 3rem;
+    display: block;
+    text-align: center;
+    margin: 2rem;
+  }
+}
 
 .subtitulo--seccion {
   display: flex;
