@@ -497,21 +497,20 @@ span.fake-link {
     margin: 2rem auto;
     flex-flow: column;
     width: 90%;
+    border-top: 2px solid var(--verde);
   }
   .themeSelector__block {
     display: flex;
-    justify-content: right;
-    align-items: flex-end;
-    align-content: flex-end;
     padding-top: 3rem;
     padding-right: 8px;
     cursor: pointer;
     transition: 0.5s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     background-size: fixed;
     background-position: center;
     color: var(--violeta);
     top: 0;
+    border-bottom: 2px solid var(--verde);
   }
   .theme-selector__container > * {
     height: 100%;

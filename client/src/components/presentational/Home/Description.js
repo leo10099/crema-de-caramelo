@@ -40,9 +40,9 @@ const MainButton = styled.button`
   width: 95%;
   text-align: center;
   line-height: 3em;
-  background-color: transparent;
+  background-color: ${props => props.theme.rosa};
   color: ${props => props.theme.crema};
-  border: 2px solid ${props => props.theme.verde};
+  border: 2px solid ${props => props.theme.rosa};
 
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
