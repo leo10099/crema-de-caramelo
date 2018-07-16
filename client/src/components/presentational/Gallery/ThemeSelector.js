@@ -21,7 +21,9 @@ export default class ThemeSelector extends Component {
     const blockClass = `themeSelector__block ${theme}`
     return (
       <Link to='/galeria' className={blockClass} id={theme} key={theme}>
-        {this.camelCaseToNormal(theme)}
+        <div className='galeria__blockOverlay'>
+          {this.camelCaseToNormal(theme)}
+        </div>
       </Link>
     )
   }
