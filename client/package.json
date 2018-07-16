@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-images": "^0.5.17",
@@ -11,7 +10,6 @@
     "react-photo-gallery": "^6.0.28",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-spinners": "^0.3.2",
     "styled-components": "^3.3.3"
   },
   "proxy": {
