@@ -576,6 +576,7 @@ span.fake-link {
   background-repeat: no-repeat;
   background-color: var(--rosa);
   background-position: left;
+  background-blend-mode: soft-light;
   display: grid;
 }
 
