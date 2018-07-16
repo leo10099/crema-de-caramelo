@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link } from 'react-router-dom'
 
 const Description = () => {
   return (
     <section className='description-container'>
       <p className='titulo'>Mesa de <span className='texto-verde'> golosinas </span>personalizadas </p>
+      <Link to='/contacto'>
       <MainButton>
         <i className='fa fa-heart' />
         &nbsp;Quiero mi Candybar &nbsp;
         <i className='fa fa-heart' />
       </MainButton>
+      </Link>
 
     </section>
   )
@@ -69,14 +72,14 @@ const MainButton = styled.button`
     cursor:pointer
 
   &:hover {
-    color: ${props => props.theme.violeta};
+    color: ${props => props.theme.crema};
     box-shadow: 0 0 30px 0 rgba(184, 134, 11, 0.6);
     border: 2px solid ${props => props.theme.verde};
     border:0;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    background-color: ${props => props.theme.verde};
+    background-color: ${props => props.theme.rosa};
   }
   &:hover:before {
     -webkit-animation: shine 0.7s 0s linear;

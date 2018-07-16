@@ -110,7 +110,7 @@ a {
 
 /* SHARED */
 
-.subtitulo--seccion {
+.gallery__subtitulo {
   display: flex;
   text-align: center;
   padding: 1.2rem;
@@ -437,7 +437,9 @@ span.fake-link {
   background-size: fixed;
   background-repeat: no-repeat;
   background-color: var(--rosa);
-  background-blend-mode: color-burn;
+  background-blend-mode: multiply;
+
+
 }
 
 .img-title__gallery {
@@ -459,10 +461,6 @@ span.fake-link {
     margin: 2rem auto;
     flex-flow: column;
     width: 470px;
-    border-left: 4px solid #efe6dd;
-    border-right: 4px solid #efe6dd;
-    border-bottom: 2px solid #efe6dd;
-    border-top: 2px solid #efe6dd;
   }
   .themeSelector__block {
     display: flex;
@@ -471,11 +469,12 @@ span.fake-link {
     padding: 1.5rem;
     cursor: pointer;
     transition: 0.2s all linear;
+    background-color: var(--violeta);
+    background-blend-mode: hard-light;
     background-size: fixed;
     background-position: center;
-    border-bottom: 2px solid #efe6dd;
-    border-top: 2px solid #efe6dd;
     color: var(--violetaClaro);
+
   }
   .theme-selector__container > * {
     height: 100%;
@@ -483,12 +482,13 @@ span.fake-link {
     color: transparent;
     font-family: 'Freestyle';
     background-size: cover;
+
   }
 
   .block-open {
-    font-size: 2.6rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: whitesmoke;
+    color:  white;
   }
 }
 
@@ -500,26 +500,20 @@ span.fake-link {
     align-items: center;
     margin: 2rem auto;
     flex-flow: column;
-    width: 320px;
-    border-left: 4px solid #efe6dd;
-    border-right: 4px solid #efe6dd;
-    border-bottom: 2px solid #efe6dd;
-    border-top: 2px solid #efe6dd;
+    width: 90%;
   }
   .themeSelector__block {
     display: flex;
     justify-content: right;
     align-items: flex-end;
     align-content: flex-end;
-    padding-top: 2.5rem;
+    padding-top: 3rem;
     padding-right: 8px;
     cursor: pointer;
     transition: 0.5s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
     font-size: 1.4rem;
     background-size: fixed;
     background-position: center;
-    border-bottom: 2px solid #efe6dd;
-    border-top: 2px solid #efe6dd;
     color: var(--violeta);
     top: 0;
   }
