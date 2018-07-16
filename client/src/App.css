@@ -574,7 +574,7 @@ span.fake-link {
   background-image: url('../src/assets/img/bg/contacto.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--violeta);
+  background-color: var(--violetaClaro);
   background-blend-mode: soft-light;
   background-position: top right;
   display: grid;
