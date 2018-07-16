@@ -558,6 +558,13 @@ a {
     text-align: center;
     margin: 2rem;
   }
+  .social-container {
+    display: block;
+    margin: 0 auto;
+  }
+  .social-container > * {
+    margin-top: 1rem;
+  }
 }
 
 .subtitulo--seccion {

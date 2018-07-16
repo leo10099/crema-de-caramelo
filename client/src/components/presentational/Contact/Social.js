@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ContactButton from '../../ui-elements/contactButton'
 
 export default class Social extends Component {
   state = {
@@ -10,30 +11,28 @@ export default class Social extends Component {
   }
   render () {
     return (
-      <div>
-        <section className='social-container'>
-          <div className='contact__button-panel'>
-            <button>
-              Mirá más fotos en {' '} <i className='fab fa-instagram' />
-            </button>
-            <button>
-              Enterate más sobre nosotras en {' '}
-              <i className='fab fa-facebook' />
-            </button>
-            <button onClick={this.toggleDisplayPhoneNumbers}>
-              Contactanos por {' '}
-              <i className='fab fa-whatsapp' />
-            </button>
+      <section className='social-container'>
+        <div className='contact__button-panel'>
+          <ContactButton>
+            Mirá más fotos en {' '} <i className='fab fa-instagram' />
+          </ContactButton>
+          <ContactButton>
+            Enterate más sobre nosotras en {' '}
+            <i className='fab fa-facebook' />
+          </ContactButton>
+          <ContactButton onClick={this.toggleDisplayPhoneNumbers}>
+            Mensajeanos por {' '}
+            <i className='fab fa-whatsapp' />
+          </ContactButton>
+        </div>
+        {this.state.displayPhoneNumbers
+          ? <div>
+              Cristina: 11 - 6247 - 0115
+              {' '}
+            <a href='/' className='fa fa-address-book' />
           </div>
-          {this.state.displayPhoneNumbers
-            ? <div>
-                Cristina: 11 - 6247 - 0115
-                {' '}
-              <a href='/' className='fa fa-address-book' />
-            </div>
-            : null}
-        </section>
-      </div>
+          : null}
+      </section>
     )
   }
 }
