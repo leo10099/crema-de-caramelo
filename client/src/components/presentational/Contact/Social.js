@@ -21,7 +21,7 @@ export default class Social extends Component {
             <i className='fab fa-whatsapp' />{' '}
           </ContactButton>
           <ContactButton onClick={this.goToFb}>
-            Enterate más sobre nosotras en {' '}
+            Más sobre nosotras en {' '}
             <i className='fab fa-facebook-f' />
           </ContactButton>
         </div>
