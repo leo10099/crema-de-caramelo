@@ -57,9 +57,9 @@ const MainButton = styled.button`
     text-align: center;
     padding: 0 2rem 0 2rem;
     margin: 0 auto;
-    background-color: ${props => props.theme.rosa};
+    background-color: transparent;
     color: whitesmoke;
-    border: 2px solid ${props => props.theme.rosa};
+    border: 2px solid ${props => props.theme.verde};
     border-radius: 5px;
     line-height: 3em;
     box-shadow: 0 0 0 0 transparent;
@@ -69,13 +69,14 @@ const MainButton = styled.button`
     cursor:pointer
 
   &:hover {
-    color: whitesmoke;
+    color: ${props => props.theme.violeta};
     box-shadow: 0 0 30px 0 rgba(184, 134, 11, 0.6);
-    border: 2px solid ${props => props.theme.rosa};
+    border: 2px solid ${props => props.theme.verde};
     border:0;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+    background-color: ${props => props.theme.verde};
   }
   &:hover:before {
     -webkit-animation: shine 0.7s 0s linear;
