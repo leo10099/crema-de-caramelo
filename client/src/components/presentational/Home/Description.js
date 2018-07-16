@@ -1,17 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Description = () => {
   return (
     <section className='description-container'>
-      <p className='titulo'>Mesa de <span className='texto-verde'> golosinas </span>personalizadas </p>
+      <p className='titulo'>
+        Mesa de
+        {' '}
+        <span className='texto-verde'> golosinas </span>
+        personalizadas
+        {' '}
+      </p>
       <Link to='/contacto'>
-      <MainButton>
-        <i className='fa fa-heart' />
-        &nbsp;Quiero mi Candybar &nbsp;
-        <i className='fa fa-heart' />
-      </MainButton>
+        <MainButton>
+          <i className='fa fa-heart' />
+          &nbsp;Quiero mi Candybar &nbsp;
+          <i className='fa fa-heart' />
+        </MainButton>
       </Link>
 
     </section>
@@ -62,7 +68,7 @@ const MainButton = styled.button`
     margin: 0 auto;
     background-color: transparent;
     color: whitesmoke;
-    border: 2px solid ${props => props.theme.verde};
+    border: 2px solid ${props => props.theme.crema};
     border-radius: 5px;
     line-height: 3em;
     box-shadow: 0 0 0 0 transparent;
@@ -74,7 +80,6 @@ const MainButton = styled.button`
   &:hover {
     color: ${props => props.theme.crema};
     box-shadow: 0 0 30px 0 rgba(184, 134, 11, 0.6);
-    border: 2px solid ${props => props.theme.verde};
     border:0;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
