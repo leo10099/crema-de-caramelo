@@ -31,9 +31,9 @@ const MainButton = styled.button`
   width: 95%;
   text-align: center;
   line-height: 3em;
-  background-color: ${props => props.theme.rosa};
-  color: ${props => props.theme.rosa};
-  border: 2px solid ${props => props.theme.rosa};
+  background-color: transparent;
+  color: ${props => props.theme.crema};
+  border: 2px solid ${props => props.theme.verde};
 
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
