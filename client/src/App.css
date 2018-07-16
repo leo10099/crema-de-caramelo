@@ -542,11 +542,13 @@ a {
     background-color: var(--violeta);
     background-blend-mode: overlay;
     background-position: bottom;
+    display: grid;
   }
   .contact__img-title {
     display: block;
     width: 250px;
-    margin: 2rem auto;
+    padding-top: 6rem;
+    justify-self: center;
   }
   .contact__title {
     font-size: 1.7rem;
@@ -562,8 +564,9 @@ a {
     display: block;
     margin: 0 auto;
   }
-  .social-container > * {
-    margin-top: 1rem;
+  .contact__button-panel > * {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
   }
 }
 
@@ -581,7 +584,7 @@ a {
   background-color: var(--crema);
 }
 
-.texto__rosa {
+.texto-rosa {
   color: rgba(188, 167, 186, 1);
   font-weight: bold;
 }
