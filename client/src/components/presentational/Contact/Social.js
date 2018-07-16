@@ -12,17 +12,17 @@ export default class Social extends Component {
   render () {
     return (
       <section className='social-container'>
-        <div className='subtitulo--seccion'>
-          <i className='fa fa-phone-square' />{' '}Teléfono: 11 - 6247 - 0115
+        <div className='social-phone'>
+          <i className='fa fa-phone-square' />{' '}11 - 6247 - 0115
         </div>
         <div className='contact__button-panel'>
           <ContactButton className='mobile-only' onClick={this.sendWhatsapp}>
             Mensajeanos por {' '}
-            <i className='fab fa-whatsapp' />{' '}
+            <i className='fab fa-whatsapp texto-verde' />{' '}
           </ContactButton>
           <ContactButton onClick={this.goToFb}>
             Más sobre nosotras en {' '}
-            <i className='fab fa-facebook-f' />
+            <i className='fab fa-facebook-f texto-verde'/>
           </ContactButton>
         </div>
       </section>

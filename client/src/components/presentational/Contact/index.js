@@ -11,8 +11,8 @@ export default class Contact extends Component {
         <div className='contact-container'>
           <img src={ContactHeaderImg} className='contact__img-title' alt='' />
           <p className='contact__title'>
-            Para que tu Candy sea único, hacemos realidad tu idea con con dedicación, atención al detalle, calidad, y mucho
-            {' '} <i className='fa fa-heart' />
+            Para que tu Candy sea <span className='texto-verde'>único</span> hacemos realidad tu idea con con dedicación, atención al detalle, calidad, y mucho
+            <span className='texto-verde'> {' '} <i className='fa fa-heart texto-verde' /></span>
           </p>
           <SocialContainer />
         </div>

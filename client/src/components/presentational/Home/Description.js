@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Description = () => {
   return (
     <section className='description-container'>
-      <p className='titulo'>Mesa de golosinas personalizadas </p>
+      <p className='titulo'>Mesa de <span className='texto-verde'> golosinas </span>personalizadas </p>
       <MainButton>
         <i className='fa fa-heart' />
         &nbsp;Quiero mi Candybar &nbsp;
@@ -32,7 +32,7 @@ const MainButton = styled.button`
   text-align: center;
   line-height: 3em;
   background-color: ${props => props.theme.rosa};
-  color: whitesmoke;
+  color: ${props => props.theme.rosa};
   border: 2px solid ${props => props.theme.rosa};
 
   box-shadow: 0 0 0 0 transparent;

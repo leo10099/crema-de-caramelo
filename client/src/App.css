@@ -8,6 +8,7 @@ html {
   --crema: #efe6dd;
   --rosa: #bca7ba;
   --violeta: #190933;
+  --verde: #00dfc4;
   --violetaClaro: #665687;
 }
 
@@ -112,15 +113,15 @@ a {
 .subtitulo--seccion {
   display: flex;
   text-align: center;
-  padding: 1.1rem;
+  padding: 1.2rem;
   align-self: center;
   font-weight: bolder;
+  background-color: whitesmoke;
   color: var(--violeta);
   font-family: 'Alcubierre';
   font-size: 1.3rem;
   letter-spacing: 0.2rem;
   display: block;
-  background-color: var(--crema);
 }
 
 @media screen and (min-width: 769px) {
@@ -132,6 +133,9 @@ a {
 .texto-rosa {
   color: rgba(188, 167, 186, 1);
   font-weight: bold;
+}
+.texto-verde {
+  color: var(--verde);
 }
 
 span.fake-link {
@@ -443,6 +447,7 @@ span.fake-link {
   margin-right: auto;
   display: block;
   padding: 0.6rem auto;
+  filter: drop-shadow(0px 2px 8px var(--rosa));
 }
 
 @media screen and (min-width: 769px) {
@@ -576,18 +581,19 @@ span.fake-link {
   background-repeat: no-repeat;
   background-color: var(--rosa);
   background-position: left;
-  background-blend-mode: soft-light;
+  background-blend-mode: multiply;
   display: grid;
 }
 
 .contact__img-title {
   display: block;
-  width: 250px;
+  width: 280px;
   padding-top: 6rem;
   justify-self: center;
+  filter: drop-shadow(0px 4px 8px var(--rosa));
 }
 .contact__title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   font-family: 'Alcubierre';
   letter-spacing: 0.4rem;
@@ -596,6 +602,13 @@ span.fake-link {
   display: block;
   text-align: center;
   margin: 2rem auto;
+
+}
+.social-phone{
+  color: var(--verde);
+  text-align:center;
+  font-size: 2.5rem;
+  font-family:'Freestyle'
 }
 .social-container {
   display: block;
@@ -611,14 +624,17 @@ span.fake-link {
     letter-spacing: 2px;
   }
   .contact__title {
-    font-size: 1.6rem;
-    max-width: 85%;
+    font-size: 1.4em;
     font-weight: bolder;
-    color: var(--crema);
+    color: whitesmoke;
+    max-width: 280px;
+    margin-top: -50px;
   }
   .contact__img-title {
-    padding-top: 1rem;
-    width: 200px;
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 220px;
+    filter: drop-shadow(0px 4px 16px var(--rosa));
   }
 }
 
