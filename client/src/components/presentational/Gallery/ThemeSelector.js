@@ -18,10 +18,22 @@ export default class ThemeSelector extends Component {
   }
 
   renderThemeBlock = theme => {
+    const { setCurrentGallery } = this.props
     const blockClass = `themeSelector__block ${theme}`
+
     return (
-      <Link to='/galeria' className={blockClass} id={theme} key={theme}>
-        <div className='galeria__blockOverlay'>
+      <Link
+        to='/galeria'
+        className={blockClass}
+        id={theme}
+        key={theme}
+        onClick={setCurrentGallery}
+      >
+        <div
+          className='galeria__blockOverlay'
+          onClick={setCurrentGallery}
+          name={theme}
+        >
           {this.camelCaseToNormal(theme)}
         </div>
       </Link>
@@ -30,13 +42,12 @@ export default class ThemeSelector extends Component {
 
   render () {
     const { themes } = this.props
-    const { setCurrentGallery } = this.props
+
     return (
       <section
         className='theme-selector__container'
         onMouseOver={this.toggleBlockOpen}
         onMouseOut={this.toggleBlockOpen}
-        onClick={setCurrentGallery}
       >
         {themes.map(this.renderThemeBlock)}
       </section>

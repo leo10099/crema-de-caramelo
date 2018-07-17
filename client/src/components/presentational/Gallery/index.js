@@ -29,12 +29,21 @@ class Gallery extends Component {
 
   setCurrentGallery = e => {
     e.preventDefault()
-    const { id: themeSelected } = e.target
-    this.setState(prevState => ({
-      ...prevState,
-      currentGallery: themeSelected,
-      showGallery: true
-    }))
+    if (e.target.id) {
+      const { id: themeSelected } = e.target
+      this.setState(prevState => ({
+        ...prevState,
+        currentGallery: themeSelected,
+        showGallery: true
+      }))
+    } else {
+      const { value: themeSelected } = e.target.attributes.name
+      this.setState(prevState => ({
+        ...prevState,
+        currentGallery: themeSelected,
+        showGallery: true
+      }))
+    }
   }
 
   resetGallery = () => {
