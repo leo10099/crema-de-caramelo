@@ -13,7 +13,13 @@ export default class Social extends Component {
     return (
       <section className='social-container'>
         <div className='social-phone'>
-          <i className='fa fa-phone' />{' '}11 - 6247 - 0115 / 11-6248-5589
+          <i className='fa fa-phone' />
+          {' '}
+          11 - 6247 - 0115/
+          {' '}
+          <br />
+          {' '}
+          11-6248-5589
         </div>
         <div className='social-email'>
           <a href='mailto:cremadecaramelo17@gmail.com'>

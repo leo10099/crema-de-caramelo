@@ -604,16 +604,18 @@ span.fake-link {
   line-height: 2rem;
   padding-bottom: 1rem;
   line-height: 1.2;
+  letter-spacing: 0.1rem;
 }
 .social-email a {
   color: var(--verde);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: block;
   margin: 0 auto;
   font-family: 'Alcubierre';
   line-height: 2rem;
   color: var(--verde);
+  letter-spacing: 0.1rem;
 }
 
 .social-container {
