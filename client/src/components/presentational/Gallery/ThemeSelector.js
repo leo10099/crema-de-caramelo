@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default class ThemeSelector extends Component {
   toggleBlockOpen = e => {
     const bloque = e.target
-    bloque.classList.toggle('block-open')
+    bloque.classList.toggle('overlay-open')
   }
 
   camelCaseToNormal (camelCase) {
