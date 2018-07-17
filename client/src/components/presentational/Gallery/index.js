@@ -71,7 +71,6 @@ class Gallery extends Component {
           themes={this.state.themes}
           setCurrentGallery={this.setCurrentGallery}
         />
-
         <Footer>
           <i className='far fa-question-circle' />
           {' '}
