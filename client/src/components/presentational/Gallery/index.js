@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Nav from '../Nav'
 import Footer from './Footer'
-import HeaderImg from '../../../assets/img/caragaleria3.png'
+import HeaderImg from '../../../assets/img/caragaleria.png'
 import ThemeSelector from './ThemeSelector'
 import axios from 'axios'
 import { withRouter } from 'react-router'
