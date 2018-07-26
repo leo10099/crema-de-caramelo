@@ -12,23 +12,6 @@ class Nav extends React.Component {
     galeria: 'nav-item',
     contacto: 'nav-item'
   }
-  /*
-  componentWillReceiveProps = () => {
-    if (this.props.match !== undefined) {
-      if (this.props.match.path === '/galeria') {
-        this.setState(prevState => ({
-          ...prevState,
-          galeria: 'nav-item__active'
-        }))
-      }
-      if (this.props.match.path === '/contacto') {
-        this.setState(prevState => ({
-          ...prevState,
-          contacto: 'nav-item__active'
-        }))
-      }
-    }
-  } */
 
   checkGallery = () => {
     if (this.props.currentGallery !== '') {
