@@ -9,12 +9,8 @@ border: 2px solid ${props => props.theme.verde};
 border-radius: 5px;
 background-color: transparent;
 color: ${props => props.theme.crema};
-
-
 cursor: pointer;
-
 transition: 0.3s ease all
-
   &:active {
     transform: scale3d(0.92, 0.92, 0.92);
   }
