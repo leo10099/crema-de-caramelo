@@ -3,7 +3,10 @@ const express = require('express')
 var app = express()
 
 // ! Iniciar y configurar Middleware
-//Implementar Compresión
+// Forzar SSL
+const enforce = require('express-sslify')
+app.use(enforce.HTTPS())
+// Implementar Compresión
 const compression = require('compression')
 app.use(compression())
 const bodyParser = require('body-parser')
