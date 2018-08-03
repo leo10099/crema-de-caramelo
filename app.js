@@ -3,6 +3,9 @@ const express = require('express')
 var app = express()
 
 // ! Iniciar y configurar Middleware
+//Implementar Compresión
+const compression = require('compression')
+app.use(compression())
 const bodyParser = require('body-parser')
 // Implementar Body Parser
 app.use(bodyParser.json())
