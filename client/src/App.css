@@ -597,15 +597,23 @@ span.fake-link {
   margin: 2rem auto;
 }
 .social-phone {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  justify-content: center;
   color: var(--verde);
-  text-align: center;
   font-size: 2.5rem;
   font-family: 'Alcubierre';
-  line-height: 2rem;
-  padding-bottom: 1rem;
   line-height: 1.2;
   letter-spacing: 0.1rem;
 }
+.fa-phone{
+  text-align: center !important;
+}
+.phone{
+  display: block !important;
+}
+
 .social-email a {
   color: var(--verde);
   text-align: center;
