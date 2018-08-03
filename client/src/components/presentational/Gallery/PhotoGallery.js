@@ -82,7 +82,7 @@ export default class PhotoGallery extends Component {
                 onClickNext={this.gotoNext}
                 currentImage={this.state.currentImage}
                 isOpen={this.state.lightboxIsOpen}
-                imageCountSeparator={"de"}
+                imageCountSeparator="de"
               />
               <Footer resetGallery={this.props.resetGallery}>
                 <span className="fake-link">
