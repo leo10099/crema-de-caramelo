@@ -15,7 +15,7 @@ export default class Social extends Component {
         <div className='social-phone'>
           <i className='fa fa-phone' />
           {' '}
-          11 - 6247 - 0115/
+          11-6247-0115/
           {' '}
           <br />
           {' '}
