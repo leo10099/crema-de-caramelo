@@ -74,7 +74,7 @@ export default class PhotoGallery extends Component {
                 photos={fotos}
                 onClick={this.openLightbox}
                 columns={columns}
-                imageCountSeparator={"de"}
+                imageCountSeparator={de}
               />
               <Lightbox
                 images={fotos}
