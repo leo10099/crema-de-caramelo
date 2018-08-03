@@ -1,9 +1,10 @@
 // ! Iniciar Express
 const express = require('express')
-var app = express()
+const app = express()
 
 // ! Iniciar y configurar Middleware
 // Forzar SSL
+const http = require('http')
 const enforce = require('express-sslify')
 app.use(enforce.HTTPS())
 // Implementar Compresión
