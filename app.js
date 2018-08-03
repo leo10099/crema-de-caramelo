@@ -3,6 +3,9 @@ const express = require('express')
 const app = express()
 
 // ! Iniciar y configurar Middleware
+// Forzar SSL
+const enforce = require('express-sslify')
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 // Implementar Compresión
 const compression = require('compression')
 app.use(compression())
