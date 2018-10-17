@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 import ContactButton from '../../ui-elements/contactButton'
 
 export default class Social extends Component {
-  goToFb () {
+  goToFb() {
     window.open('https://www.facebook.com/cremadecaramelocandybar')
   }
-  sendWhatsapp () {
+  sendWhatsapp() {
     window.open('https://wa.me/5491162470115')
   }
 
-  render () {
+  render() {
     return (
       <section className='social-container'>
         <div className='social-phone'>
           <i className='fa fa-phone' />
           <div>
-          <span class='pone'>11-6247-0115</span>
-          <span class='phone'>11-6248-5589</span>
+            <span className='pone'>11-6247-0115</span>
+            <span className='phone'>11-6248-5589</span>
           </div>
         </div>
         <div className='social-email'>
