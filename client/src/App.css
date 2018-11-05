@@ -409,8 +409,8 @@ span.fake-link {
     position: relative;
     margin: 0 auto;
     display: block;
-    top: 35%;
-    width: 20%;
+    top: 20%;
+    width: 30%;
   }
 }
 

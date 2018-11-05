@@ -8,6 +8,7 @@ const MainButton = styled.button`
   letter-spacing: 0.3rem;
   font-size: 15px;
   font-weight: bold;
+  opacity:0.8;
   display: block;
   margin: 0 auto;
   margin-bottom: 2.8rem;
@@ -31,6 +32,7 @@ const MainButton = styled.button`
     font-size: 20px;
     font-weight: bold;
     display: block;
+    opacity:0.8;
     position: relative;
     text-align: center;
     padding: 0 2rem 0 2rem;
