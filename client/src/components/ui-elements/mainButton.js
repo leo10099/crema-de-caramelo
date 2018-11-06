@@ -6,7 +6,7 @@ const MainButton = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   opacity:0.8;
   display: block;
