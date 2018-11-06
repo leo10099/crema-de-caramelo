@@ -19,8 +19,10 @@ class Gallery extends Component {
       'elPrincipito',
       'emoticones',
       'minnie',
+      "moana",
       'peppaPig',
-      'unicornio'
+      'unicornio',
+      "zenon"
     ],
     cloudData: {},
     showGallery: false,
@@ -89,7 +91,7 @@ class Gallery extends Component {
     )
   }
 
-  renderThemeGallery () {
+  renderThemeGallery() {
     return (
       <PhotoGallery
         currentGallery={this.state.currentGallery}
@@ -102,7 +104,7 @@ class Gallery extends Component {
     )
   }
 
-  render () {
+  render() {
     if (this.state.showGallery) {
       return this.renderThemeGallery()
     } else {
